@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+class task1 {
+    public static void main(String arg[]) 
+    {
+        try (Scanner scan = new Scanner(System.in)) 
+        {
+            System.out.println("Enter your name :");
+            String yname = scan.nextLine();
+            System.out.println("Enter your School name :");
+            String sname = scan.nextLine();
+            System.out.println("Enter your Tamil mark ?/100");
+            int tscore = scan.nextInt();
+            System.out.println("Enter your English mark ?/100");
+            int escore = scan.nextInt();
+            System.out.println("Enter your Economics mark ?/100");
+            int ecscore = scan.nextInt();
+            System.out.println("Enter your Commerce mark ?/100");
+            int cscore = scan.nextInt();
+            System.out.println("Enter your Accontancy mark ?/100");
+            int cascore = scan.nextInt();
+            System.out.println("Enter your Computer Applications mark ?/100");
+            int ascore = scan.nextInt();
+            int tmark = (tscore + escore + ecscore + cscore + cascore + ascore);
+            double amark = ((double) tmark / 600) * 100;
+            String grade;
+            if (amark >= 90) {
+                grade = "A";
+            } else if (amark >= 80) {
+                grade = "B";
+            } else if (amark >= 70) {
+                grade = "C";
+            } else if (amark >= 60) {
+                grade = "D";
+            } else {
+                grade = "E (Fail)";
+            }
+            System.out.println("Student Name : " + yname);
+            System.out.println("Student School Name : " + sname);
+            System.out.println("Total Marks : " + tmark + "/600");
+            System.out.println("Percentage : " + amark + "%");
+            System.out.println("Grade : " + grade);
+        }
+    }
+}
